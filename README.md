@@ -5,7 +5,8 @@ The Solana program that burns the $RUNNERS transfer fee.
 $RUNNERS is a Token-2022 token with a 1% transfer fee. Token-2022 withholds that fee in the receiving token accounts,
 and only the mint's *withdraw-withheld authority* can collect it. That authority is this program's address
 `["burn-authority"]` (a PDA), and no key can sign for it, so the fees can only ever be collected by this program,
-which burns them.
+which burns them. The program can be upgraded until its upgrade authority is removed; the current authority is shown
+on-chain.
 
 ## What it does
 
